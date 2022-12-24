@@ -118,4 +118,29 @@ unloop: result=9.1, duration = 463ms
 SIMD: result=9.1, duration = 110ms
 SIMD+OpenMP: result=9.1, duration = 109ms
 [root@sdtp-dev build]# 
+
+##### Set optimization level to 3 #####
+```
+set(CXX_FLAGS
+ -O3
+ -march=native
+ )
+```
+[root@sdtp-dev build]# make
+Scanning dependencies of target dotp
+[ 33%] Building CXX object CMakeFiles/dotp.dir/main.cpp.o
+[ 66%] Building CXX object CMakeFiles/dotp.dir/matoperation.cpp.o
+[100%] Linking CXX executable dotp
+[100%] Built target dotp
+[root@sdtp-dev build]# ./dotp 
+normal: result=9.1, duration = 200ms
+unloop: result=9.1, duration = 197ms
+SIMD: result=9.1, duration = 33ms
+SIMD+OpenMP: result=9.1, duration = 31ms
+[root@sdtp-dev build]# ./dotp 
+normal: result=9.1, duration = 190ms
+unloop: result=9.1, duration = 199ms
+SIMD: result=9.1, duration = 32ms
+SIMD+OpenMP: result=9.1, duration = 34ms
+[root@sdtp-dev build]# 
 */
