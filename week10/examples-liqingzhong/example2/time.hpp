@@ -2,6 +2,7 @@
 #include <iostream>
 
 class MyTime {
+    private:
         int hours;
         int minutes;
     public:

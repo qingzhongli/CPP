@@ -13,3 +13,11 @@ int main() {
 
     return 0;
 }
+
+/*
+[root@sdtp-dev example1]# g++ main.cpp -std=c++11
+[root@sdtp-dev example1]# ./a.out 
+4 hours and 0 minutes.
+5 hours and 20 minutes.
+[root@sdtp-dev example1]# 
+*/
